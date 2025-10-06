@@ -1659,3 +1659,125 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+/* Estilos customizados para projetos */
+.projects-list {
+	margin-top: 1.5em;
+}
+
+.project-item {
+	margin-bottom: 1em;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 0.375em;
+	background: rgba(255, 255, 255, 0.035);
+	overflow: hidden;
+	transition: all 0.3s ease;
+}
+
+.project-item:hover {
+	border-color: rgba(24, 191, 239, 0.3);
+	background: rgba(255, 255, 255, 0.05);
+}
+
+.project-title {
+	display: flex;
+	align-items: center;
+	padding: 1em 1.5em;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 1.1em;
+	transition: all 0.2s ease;
+	position: relative;
+}
+
+.project-title:hover {
+	background: rgba(24, 191, 239, 0.1);
+}
+
+.project-title::marker {
+	content: '';
+}
+
+.project-title::-webkit-details-marker {
+	display: none;
+}
+
+.project-title::after {
+	content: '▼';
+	margin-left: auto;
+	font-size: 0.8em;
+	transition: transform 0.3s ease;
+	color: #18bfef;
+}
+
+.project-item[open] .project-title::after {
+	transform: rotate(180deg);
+}
+
+.project-icon {
+	margin-right: 0.7em;
+	font-size: 1.2em;
+}
+
+.project-name {
+	flex-grow: 1;
+	color: #ffffff;
+}
+
+.project-status {
+	font-size: 0.8em;
+	padding: 0.25em 0.7em;
+	border-radius: 1em;
+	background: rgba(24, 191, 239, 0.2);
+	color: #18bfef;
+	margin-left: 1em;
+}
+
+.project-content {
+	padding: 0 1.5em 1.5em 1.5em;
+	animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.project-description {
+	margin-bottom: 1em;
+	color: #18bfef;
+	font-size: 1.05em;
+}
+
+.project-content h4 {
+	color: #ffffff;
+	margin: 1.2em 0 0.7em 0;
+	font-size: 1em;
+	font-weight: 600;
+}
+
+.project-content ul {
+	margin-left: 1.2em;
+	list-style: disc;
+	margin-bottom: 1em;
+}
+
+.project-content ul li {
+	margin-bottom: 0.5em;
+	line-height: 1.5;
+}
+
+.project-tech {
+	margin-top: 1em;
+	padding: 0.7em;
+	background: rgba(0, 0, 0, 0.2);
+	border-radius: 0.25em;
+	font-size: 0.9em;
+	border-left: 3px solid #18bfef;
+}
